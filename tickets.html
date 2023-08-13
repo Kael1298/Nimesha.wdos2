@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Turtle hatcheries in Sri Lanka</title>
+        <meta name="description" content=""/>
+        <meta name="author" content="">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/structure.css?=<?php echo strtotime('now'); ?>">
+
+        <style>
+
+
+            .alert {
+                position: fixed;
+                top: 0;
+                width: 96%;
+                background-color: yellow;
+                font-size: 14px;
+                text-align: center;
+                padding: 20px 2%;
+                opacity: 1;
+                animation-name: alert;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+                z-index: 999999;
+            }
+
+            .msg_sent {
+                background-color: #c8ffbe;
+            }
+
+            .msg_not_sent {
+                background-color: #ffede4;
+            }
+
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes alert {
+                0% {
+                    opacity: 0;
+                }
+                20% {
+                    opacity: 1;
+                }
+                80% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    display: none;
+                    z-index: -999;
+                }
+            }
+
+            /* Standard syntax */
+            @keyframes alert {
+                0% {
+                    opacity: 0;
+                }
+                20% {
+                    opacity: 1;
+                }
+                80% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    display: none;
+                    z-index: -999;
+                }
+            }
+
+
+            #intro {
+                margin: 5% 0;
+                text-align: center;
+            }
+
+            #intro h1 {
+                text-align: center;
+                width: 90%;
+                margin: 3% auto;
+                max-width: 590px;
+            }
+
+            #intro p {
+                text-align: center;
+                width: 90%;
+                margin: 3% auto;
+            }
+
+            .mob_dsp {
+                display: none;
+            }
+
+            h1.mob_dsp {
+                margin-top: 15%;
+                text-align: center;
+                font-weight: normal;
+            }
+
+            .grecaptcha-badge {
+                z-index: 999;
+            }
+
+            #spcl_bb {
+                clear: both;
+                width: 90%;
+                margin: auto;
+                position: relative;
+                overflow: auto;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+
+
+            /*-----------------*/
+            .bb_main {
+                width: 100%;
+                clear: both; /*max-height: 488px;*/
+                overflow: hidden;
+            }
+
+            .bb_main .rslides {
+                z-index: 999;
+                position: relative;
+                list-style: none;
+                overflow: hidden;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                background-color: #fff;
+            }
+
+            .bb_main .rslides li {
+                backface-visibility: hidden;
+                position: absolute;
+                display: none;
+                width: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            .bb_main .rslides li:first-child {
+                position: relative;
+                display: block;
+                float: left;
+            }
+
+            .bb_main .rslides img {
+                display: block;
+                height: auto;
+                float: right;
+                width: 100%;
+            }
+
+
+            .bb_h3_text { /*background-color: rgba(44, 43, 72, 0.6);*/
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 35%;
+                color: #fff;
+                z-index: 9999;
+                height: 100%;
+                font-size: 35px;
+                line-height: 150%;
+                padding: 5%;
+                display: block;
+                display: none;
+            }
+
+            .bb_p_text {
+                position: absolute;
+                right: 0;
+                top: 250px;
+                color: #fff;
+                z-index: 9999;
+                font-size: 23px;
+                display: block;
+                width: 35%;
+                padding: 0 5%;
+                display: none;
+            }
+
+            .bb_p_text a {
+                color: inherit;
+                font-size: 16px;
+                display: none;
+            }
+
+            /*-----------*/
+
+
+            .bb {
+                margin-top: 20px;
+                margin-bottom: 100px;
+                overflow: auto;
+            }
+
+            .bb .lt {
+                padding-top: 10px;
+                width: 45%;
+                float: left;
+                min-height: 400px;
+                padding-left: 7%;
+            }
+
+            .bb .lt .img_blk {
+                width: 31%;
+                float: left;
+                margin: 1%;
+                position: relative;
+            }
+
+            .bb .lt img {
+                display: block;
+                width: 100%;
+            }
+
+            .bb .lt .img_blk p {
+                position: absolute;
+                bottom: 0;
+                background-color: #000;
+                opacity: 0.7;
+                color: #fff;
+                width: 100%;
+                text-align: center;
+                padding: 3px 0;
+            }
+
+
+            /* make keyframes that tell the start state and the end state of our object */
+            @-webkit-keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @-moz-keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            .img_blk {
+                opacity: 0; /* make things invisible upon start */
+                -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+                -moz-animation: fadeIn ease-in 1;
+                animation: fadeIn ease-in 1;
+
+                -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+                -moz-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+
+                -webkit-animation-duration: 3s;
+                -moz-animation-duration: 3s;
+                animation-duration: 3s;
+            }
+
+
+            .bb .rt {
+                padding-top: 10px;
+                width: 48%;
+                float: right; /*background: #f2f2f2;*/
+                min-height: 400px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .item-1, .item-2, .item-3 {
+                position: absolute;
+                display: block;
+                top: 20%;
+                width: 60%;
+                animation-duration: 30s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                overflow: hidden;
+            }
+
+            .item-4 {
+                position: absolute;
+                display: block;
+                top: 20%;
+                width: 60%;
+                animation-duration: 30s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                overflow: hidden;
+            }
+
+
+            .bb .rt h3 {
+                font-size: 35px;
+            }
+
+            .bb .rt p {
+                font-size: 18px;
+                margin-top: 30px;
+            }
+
+            .bb .rt a {
+                color: #3c508d;
+            }
+
+
+            #spcl_bb {
+                margin-top: 37px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .bb_blk_img {
+                width: 31%;
+                display: inline-block;
+                overflow: hidden;
+                position: relative;
+                margin: 1%;
+                box-shadow: 1px 1px 5px #c7c7c7;
+                /*padding-bottom: 30px;*/
+                min-width: 300px;
+                list-style: none;
+            }
+
+            .bb_blk_img h2 {
+                text-align: center;
+                padding: 20px;
+            }
+
+            .bb_blk_img img {
+                height: 100%;
+            }
+
+
+            .bb_desc1 {
+                background-color: #fff; /*position: absolute;bottom: 0;*/
+                width: 100%;
+                padding: 1% 0; /*opacity: 0.7;*/
+                z-index: 5000;
+            }
+
+            .bb_desc1 h3 {
+                margin: 20px 0;
+            }
+
+            .bb_desc1 p {
+                color: #333;
+                text-align: center;
+                min-height: 80px;
+                padding: 20px 20px;
+                overflow: auto;
+            }
+
+            .bb_desc1 a {
+                display: block;
+                background-color: #3c508d;
+                color: #fff;
+                text-align: center;
+                width: 40%;
+                border-radius: 5px;
+                margin: 10px auto;
+                padding: 5px;
+            }
+
+            .bb_desc2 {
+                display: none;
+                margin-top: 20px;
+                z-index: 5500;
+            }
+
+
+            @media only screen and (max-width: 944px) {
+
+
+                .bb_main {
+                    width: auto;
+                    height: 500px;
+                    clear: both;
+                    max-height: unset;
+                    overflow: unset;
+                }
+
+                .bb_main .rslides {
+                    z-index: 999;
+                    position: relative;
+                    list-style: none;
+                    overflow: hidden;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    background-color: #fff;
+                }
+
+                .bb_main .rslides li {
+                    backface-visibility: hidden;
+                    position: absolute;
+                    display: none;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
+
+                .bb_main .rslides li:first-child {
+                    position: relative;
+                    display: block;
+                    float: left;
+                }
+
+                .bb_main .rslides img {
+                    display: block;
+                    height: 500px;
+                    float: right;
+                    width: auto;
+                    position: relative;
+                    right: -65%;
+                }
+
+                /*
+
+                .bb_h3_text{background-color: rgba(44, 43, 72, 0.4);position:absolute;top: 0;right:0;width: 90%;color:#fff;z-index: 9999;height:100%;font-size: 32px;line-height: 150%;padding:70px 5%;display: block;text-align: center;}
+
+                .bb_p_text{position: absolute;right: 0;top: 43%;color: #fff;z-index: 9999;font-size: 23px;display: block;width: 90%;padding:50px 5%;text-align: center;}
+                .bb_p_text a{color: inherit;font-size: 18px;}
+
+                */
+                .bb .lt {
+                    padding-top: 10px;
+                    width: 90%;
+                    float: none;
+                    min-height: unset;
+                    padding-left: unset;
+                    margin: auto;
+                }
+
+                .bb .lt .img_blk {
+                    width: 32%;
+                    float: left;
+                    margin: 0.5%;
+                    position: relative;
+                }
+
+                /*.bb .lt .img_blk p{font-size: 13px;padding: 0;}
+                */
+                .bb .rt {
+                    padding-top: 10px;
+                    width: 90%;
+                    float: none; /*background: #f2f2f2;*/
+                    min-height: 400px;
+                    position: relative;
+                    overflow: hidden;
+                    margin: auto;
+                    text-align: center;
+                }
+
+
+                .item-1, .item-2, .item-3 {
+                    position: absolute;
+                    display: block;
+                    top: 5%;
+                    width: 90%;
+                    animation-duration: 30s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                    overflow: hidden;
+                }
+
+                .bb .rt h3 {
+                    font-size: 28px;
+                }
+
+                .bb_blk_img {
+                    width: 98%;
+                    float: none;
+                    margin: 0% auto;
+                    margin-top: 10%;
+                }
+
+                .mob_dsp {
+                    display: block;
+                }
+
+                #spcl_bb {
+                    width: 85%;
+                }
+
+                #intro h3 {
+                    display: none;
+                }
+
+                #intro h1 {
+                    font-weight: normal;
+                    line-height: 130%;
+                }
+
+                .tour_blk {
+                    width: 85%;
+                }
+
+                .col50 {
+                    width: unset;
+                    display: block;
+                }
+
+                form {
+                    overflow: unset;
+                }
+
+
+            }
+
+
+            .options {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: inline-flex;
+                height: 30px;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                /*margin-right: 30px;*/
+                margin-left: 30px;
+            }
+
+            .options button {
+                width: 30px;
+                height: 30px;
+                /*border-radius: 50%;*/
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                cursor: pointer;
+                background-color: rgba(142, 161, 213, 0.85);
+                color: #3B3B98;
+                /*border: #474747 solid ;*/
+            }
+
+            .options span {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 18px;
+                margin-left: 18px;
+                font-size: 22px;
+                font-weight: 400;
+                color: black;
+            }
+
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/responsiveslides.min.js"></script>
+        <!--        <script>-->
+        <!--            $(function () {-->
+        <!--                $(".rslides").responsiveSlides({-->
+        <!--                    timeout: 5600,-->
+        <!--                    speed: 2600,-->
+        <!--                });-->
+        <!--            });-->
+        <!--        </script>-->
+
+
+    </head>
+</head>
+<body>
+
+<div id="header">
+    <a href="index.php"><img class="logo"
+                             src="img/logo/turtle-hatcheries-high-resolution-logo-color-on-transparent-background.png"
+                             alt="irwin energy engineering company logo"></a>
+
+    <div id="menu_but" class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+
+    <script>
+
+        function plus_sl_adult() {
+            var qty = document.getElementById("sl_adult");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal)) {
+                qty.innerHTML = currentVal + 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+
+        function minus_sl_adult() {
+            var qty = document.getElementById("sl_adult");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal) && currentVal > 0) {
+                qty.innerHTML = currentVal - 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+        function plus_sl_child() {
+            var qty = document.getElementById("sl_child");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal)) {
+                qty.innerHTML = currentVal + 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+
+        function minus_sl_child() {
+            var qty = document.getElementById("sl_child");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal) && currentVal > 0) {
+                qty.innerHTML = currentVal - 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+
+        function plus_f_adult() {
+            var qty = document.getElementById("f_adult");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal)) {
+                qty.innerHTML = currentVal + 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+
+        function minus_f_adult() {
+            var qty = document.getElementById("f_adult");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal) && currentVal > 0) {
+                qty.innerHTML = currentVal - 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+
+        function plus_f_child() {
+            var qty = document.getElementById("f_child");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal)) {
+                qty.innerHTML = currentVal + 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+
+        function minus_f_child() {
+            var qty = document.getElementById("f_child");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal) && currentVal > 0) {
+                qty.innerHTML = currentVal - 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+        function plus_infant() {
+            var qty = document.getElementById("infant");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal)) {
+                qty.innerHTML = currentVal + 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+
+        function minus_infant() {
+            var qty = document.getElementById("infant");
+
+            var currentVal = parseInt(qty.innerHTML);
+
+            console.log("currentVal " + currentVal)
+
+            if (!isNaN(currentVal) && currentVal > 0) {
+                qty.innerHTML = currentVal - 1;
+            } else {
+                qty.innerHTML = 0;
+            }
+
+            data_changed()
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            let currentDate = new Date().toJSON().slice(0, 10);
+            console.log(currentDate)
+            document.getElementById("booking_date").innerHTML = currentDate;
+            document.getElementById("date").value = currentDate;
+
+        }, false);
+
+
+        function booking_date_change() {
+            var date = document.getElementById("date").value;
+            document.getElementById("booking_date").innerHTML = date;
+        }
+
+        function booking_time_change() {
+            var time = document.getElementById("time").value;
+            document.getElementById("booking_time").innerHTML = time;
+
+            data_changed()
+        }
+
+        const f_adult_fee = 10;
+        const f_adult_fee_p = 13;
+        const f_child_fee = 5;
+        const f_child_fee_p = 8;
+        const sl_adult_fee = 4;
+        const sl_adult_fee_p = 6;
+        const sl_child_fee = 2;
+        const sl_child_fee_p = 3;
+
+
+        function data_changed() {
+            var sl_adult_qty = parseInt(document.getElementById("sl_adult").innerHTML);
+            var sl_child_qty = parseInt(document.getElementById("sl_child").innerHTML);
+            var f_adult_qty = parseInt(document.getElementById("f_adult").innerHTML);
+            var f_child_qty = parseInt(document.getElementById("f_child").innerHTML);
+            var infant_qty = parseInt(document.getElementById("infant").innerHTML);
+
+
+            console.log("sl_adult_qty -- " + sl_adult_qty + "  sl_child_qty -- " + sl_child_qty + "  f_adult_qty -- " + f_adult_qty + "  f_child_qty -- " + f_child_qty + " infant_qty -- " + infant_qty)
+
+            document.getElementById("pricing").innerHTML = "";
+
+            var peak = document.getElementById("time").value.includes("Peak");
+
+            console.log("peak -- " + peak)
+            var data = "";
+            var total = 0;
+
+            if (peak) {
+
+                if (f_adult_qty > 0) {
+                    var price = f_adult_qty * f_adult_fee_p;
+                    total += price;
+                    data += "<tr>";
+                    data += "<td>" + f_adult_qty + " Foreigner Adult</td>";
+                    data += "<td>$" + price + "</td>";
+                    data += "</tr>";
+                }
+
+                if (f_child_qty > 0) {
+                    var price = f_child_qty * f_child_fee_p;
+                    total += price;
+                    data += "<tr>";
+                    data += "<td>" + f_child_qty + " Foreigner Child</td>";
+                    data += "<td>$" + price + "</td>";
+                    data += "</tr>";
+                }
+
+                if (sl_adult_qty > 0) {
+                    var price = sl_adult_qty * sl_adult_fee_p;
+                    total += price;
+                    data += "<tr>";
+                    data += "<td>" + sl_adult_qty + " SL Adult</td>";
+                    data += "<td>$" + price + "</td>";
+                    data += "</tr>";
+                }
+
+                if (sl_child_qty > 0) {
+                    var price = sl_child_qty * sl_child_fee_p;
+                    total += price;
+                    data += "<tr>";
+                    data += "<td>" + sl_child_qty + " SL Child</td>";
+                    data += "<td>$" + price + "</td>";
+                    data += "</tr>";
+                }
+
+            } else {
+                if (f_adult_qty > 0) {
+                    var price = f_adult_qty * f_adult_fee;
+                    total += price;
+                    data += "<tr>";
+                    data += "<td>" + f_adult_qty + " Foreigner Adult</td>";
+                    data += "<td>$" + price + "</td>";
+                    data += "</tr>";
+                }
+
+                if (f_child_qty > 0) {
+                    var price = f_child_qty * f_child_fee;
+                    total += price;
+                    data += "<tr>";
+                    data += "<td>" + f_child_qty + " Foreigner Child</td>";
+                    data += "<td>$" + price + "</td>";
+                    data += "</tr>";
+                }
+
+                if (sl_adult_qty > 0) {
+                    var price = sl_adult_qty * sl_adult_fee;
+                    total += price;
+                    data += "<tr>";
+                    data += "<td>" + sl_adult_qty + " SL Adult</td>";
+                    data += "<td>$" + price + "</td>";
+                    data += "</tr>";
+                }
+
+                if (sl_child_qty > 0) {
+                    var price = sl_child_qty * sl_child_fee;
+                    total += price;
+                    data += "<tr>";
+                    data += "<td>" + sl_child_qty + " SL Child</td>";
+                    data += "<td>$" + price + "</td>";
+                    data += "</tr>";
+                }
+            }
+
+            if (infant_qty > 0) {
+                data += "<tr>";
+                data += "<td>" + infant_qty + " Infant</td>";
+                data += "<td>Free</td>";
+                data += "</tr>";
+            }
+
+
+            // <tr>
+            //     <td>1 Foreigner Adult</td>
+            //     <td>$10</td>
+            // </tr>
+            data += "<tr>";
+            data += "<th>Total Payable</th>";
+            data += "<th>$"+total+"</th>";
+            data += "</tr>";
+
+            document.getElementById("pricing").innerHTML = data;
+
+            localStorage.setItem("sl_adult_qty", sl_adult_qty);
+            localStorage.setItem("sl_child_qty", sl_child_qty);
+            localStorage.setItem("f_adult_qty", f_adult_qty);
+            localStorage.setItem("f_child_qty", f_child_qty);
+            localStorage.setItem("infant_qty", infant_qty);
+            localStorage.setItem("time", document.getElementById("time").value);
+            localStorage.setItem("date", document.getElementById("date").value);
+            localStorage.setItem("total", total);
+
+        }
+
+
+        function submit_data(){
+            location.replace("tickets-details.html")
+        }
+
+
+    </script>
+
+
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="turtle_categories.html">Turtle Species</a></li>
+            <li><a href="hikkaduwa-turtle-hatchery.html">Hikkaduwa turtle hatchery</a></li>
+            <li><a href="threats-to-turtles.html">Threats to turtles</a></li>
+            <li><a href="kosgoda-turtle-hatchery.html">Other turtle hatcheries</a></li>
+            <!--            <li><a href="kosgoda-turtle-hatchery.html">Kosgoda turtle hatcheries</a></li>-->
+            <!--            <li><a href="bentota-turtle-hatchery.html">Bentota turtle hatcheries</a></li>-->
+            <li><a href="donation.html">Purchase and Donate</a></li>
+
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#menu_but").click(function () {
+                $("#nav").slideToggle("slow");
+            });
+        });
+
+
+    </script>
+
+
+</div>
+
+<div class="bb_main">
+    <ul class="rslides">
+
+
+        <li>
+            <!--            <h3 class="bb_h3_text"  style="background-color: rgba(10,10,10,0.6);">Turtle hatcheries in Sri Lanka</h3>-->
+            <!--            <p class="bb_p_text">-->
+            <!--                <b>Explore</b><br /><br />-->
+            <!--                <a href="services">View Details</a><br />-->
+            <!--                <a href="reviews">Contact us</a>-->
+            <!--                <a href="contact">Make an enquiry</a><br />-->
+            <!--            </p>-->
+
+            <img src="img/tickects.jpg" alt="">
+            <!--            <img  src="img/turtle-hatcheries-in-sri-lanka.jpg" alt="">-->
+
+        </li>
+
+
+    </ul>
+
+    <div style="position: relative;top: 0;left: 0;">
+
+    </div>
+
+</div><!-- bb -->
+
+<div class="pg">
+
+    <h1 style=" text-align: center;">Buy Tickets</h1>
+
+    <!-- specl bb -->
+
+    <style>
+
+        legend {
+            padding: 10px;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 18px;
+            color: #fff;
+            background-color: #1c87c9;
+        }
+
+        .testbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            padding: 20px;
+        }
+
+        .form1 {
+            width: 100%;
+            padding: 50px;
+            border-radius: 6px;
+            /*background: #fff;*/
+            box-shadow: 0 0 8px #a8a9a8;
+        }
+
+        input, select, textarea {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+        }
+
+        /*input[type="date"] {*/
+        /*    padding: 4px 5px;*/
+        /*}*/
+        textarea {
+            width: 100%; /*calc(100% - 12px)*/
+            padding: 10px;
+        }
+
+        .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+            color: #006622;
+        }
+
+        .checkbox input[type=checkbox] {
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            margin-right: 5px;
+            vertical-align: text-top;
+        }
+
+        .item input:hover, .item select:hover, .item textarea:hover {
+            border: 1px solid transparent;
+            box-shadow: 0 0 3px 0 #006622;
+            color: #006622;
+        }
+
+        .item {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .item span {
+            color: red;
+        }
+
+        .week {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .colums {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .colums div {
+            width: 48%;
+        }
+
+        input[type=radio], input[type=checkbox] {
+            display: none;
+        }
+
+        label.radio {
+            position: relative;
+            display: inline-block;
+            margin: 5px 20px 15px 0;
+            cursor: pointer;
+        }
+
+        .question span {
+            margin-left: 30px;
+        }
+
+        .question-answer label {
+            display: block;
+        }
+
+        label.radio:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+        }
+
+        input[type=radio]:checked + label:before, label.radio:hover:before {
+            border: 2px solid #006622;
+        }
+
+        label.radio:after {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            width: 8px;
+            height: 4px;
+            border: 3px solid #006622;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            opacity: 0;
+        }
+
+        input[type=radio]:checked + label:after {
+            opacity: 1;
+        }
+
+        .flax {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn-block {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #1c87c9;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0692e8;
+        }
+
+        @media (min-width: 568px) {
+            .name-item, .city-item {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .name-item input, .name-item div {
+                width: calc(50% - 20px);
+            }
+
+            .name-item div input {
+                width: 97%;
+            }
+
+            .name-item div label {
+                display: block;
+                padding-bottom: 5px;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 944px) {
+            .colums {
+                display: block;
+            }
+
+            .colums div {
+                width: 100%;
+            }
+
+            .form1 {
+                width: 100%;
+                padding: 30px;
+            }
+
+            .testbox {
+                padding: 5px;
+            }
+        }
+    </style>
+
+    <div class="testbox">
+        <form class="form1">
+
+            <fieldset>
+                <h2>Tickets Details</h2>
+                <!--                <div class="colums">-->
+                <div class="item">
+                    <label for="date">Date<span>*</span></label>
+                    <input id="date" type="date" onchange="booking_date_change()"/>
+                    <!--                    </div>-->
+
+                    <br/>
+                    <br/>
+
+                    <h2>Guests</h2>
+
+                    <table>
+                        <tr>
+                            <td><p>SL Adults</p></td>
+                            <td>
+                                <div class="options">
+                                    <button name="data" type="button" onclick="minus_sl_adult()">
+                                        <svg width="15" height="3" viewBox="0 0 15 3" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 1.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <span style="color: black" id="sl_adult">0</span>
+                                    <button name="data" type="button" onclick="plus_sl_adult()">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 1.5V14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M1.5 7.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: transparent;">
+                            <td>
+                                <p>Sl Child</p>
+                            </td>
+                            <td>
+                                <div class="options">
+                                    <button name="data" type="button" onclick="minus_sl_child()">
+                                        <svg width="15" height="3" viewBox="0 0 15 3" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 1.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <span style="color: black" id="sl_child">0</span>
+                                    <button name="data" type="button" onclick="plus_sl_child()">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 1.5V14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M1.5 7.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <p>Foreigner Adult</p>
+                            </td>
+                            <td>
+                                <div class="options">
+                                    <button name="data" type="button" onclick="minus_f_adult()">
+                                        <svg width="15" height="3" viewBox="0 0 15 3" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 1.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <span style="color: black" id="f_adult">0</span>
+                                    <button name="data" type="button" onclick="plus_f_adult()">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 1.5V14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M1.5 7.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr style="background-color: transparent;">
+                            <td>
+                                <p>Foreigner Child</p>
+                            </td>
+                            <td>
+                                <div class="options">
+                                    <button name="data" type="button" onclick="minus_f_child()">
+                                        <svg width="15" height="3" viewBox="0 0 15 3" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 1.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <span style="color: black" id="f_child">0</span>
+                                    <button name="data" type="button" onclick="plus_f_child()">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 1.5V14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M1.5 7.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <p>Infant</p>
+                            </td>
+                            <td>
+                                <div class="options">
+                                    <button name="data" type="button" onclick="minus_infant()">
+                                        <svg width="15" height="3" viewBox="0 0 15 3" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 1.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <span style="color: black" id="infant">0</span>
+                                    <button name="data" type="button" onclick="plus_infant()">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 1.5V14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M1.5 7.5H14" stroke="#141322" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <h2>Time Duration</h2>
+
+                    <select id="time" onchange="booking_time_change()">
+                        <option>07.00 am - 08.00 am</option>
+                        <option>08.00 am - 09.00 am</option>
+                        <option>09.00 am - 10.00 am</option>
+                        <option>10.00 am - 11.00 am (Peak)</option>
+                        <option>11.00 am - 12.00 pm (Peak)</option>
+                        <option>12.00 pm - 01.00 pm (Peak)</option>
+                        <option>02.00 pm - 03.00 pm</option>
+                        <option>03.00 pm - 04.00 pm (Peak)</option>
+                        <option>04.00 pm - 05.00 pm (Peak)</option>
+                        <option>05.00 pm - 06.00 pm (Peak)</option>
+                    </select>
+
+                    <style>
+                        th, td {
+                            text-align: left;
+                            padding: 10px;
+                        }
+
+                        tr:nth-child(even) {
+                            background-color: #f2f2f2
+                        }
+                    </style>
+
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <h2>Price Table</h2>
+
+                    <table style="border-collapse: collapse; border-spacing: 0; width: 100%; border: 1px solid #ddd;">
+                        <tr>
+                            <th>Guests</th>
+                            <th>Time</th>
+                            <th>Price</th>
+                        </tr>
+
+                        <tr>
+                            <td>Foreigner Adult</td>
+                            <td>Normal</td>
+                            <td>$10</td>
+                        </tr>
+
+                        <tr>
+                            <td>Foreigner Adult</td>
+                            <td>Peak</td>
+                            <td>$13</td>
+                        </tr>
+
+                        <tr>
+                            <td>Foreigner Child</td>
+                            <td>Normal</td>
+                            <td>$5</td>
+                        </tr>
+
+                        <tr>
+                            <td>Foreigner Child</td>
+                            <td>Peak</td>
+                            <td>$8</td>
+                        </tr>
+
+                        <tr>
+                            <td>SL Adult</td>
+                            <td>Normal</td>
+                            <td>$4</td>
+                        </tr>
+
+                        <tr>
+                            <td>SL Adult</td>
+                            <td>Peak</td>
+                            <td>$6</td>
+                        </tr>
+
+                        <tr>
+                            <td>SL Child</td>
+                            <td>Normal</td>
+                            <td>$2</td>
+                        </tr>
+
+                        <tr>
+                            <td>SL Child</td>
+                            <td>Peak</td>
+                            <td>$3</td>
+                        </tr>
+
+                    </table>
+
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <h2>Summery Table</h2>
+
+                    <table style="border-collapse: collapse; border-spacing: 0; width: 100%; border: 1px solid #ddd;">
+                        <tr>
+                            <td>Date</td>
+                            <td id="booking_date">25/02/2023</td>
+                        </tr>
+                        <tr>
+                            <td>Time</td>
+                            <td id="booking_time">07.00 am to 08.00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Duration</td>
+                            <td id="duration">1 hrs ( 01 Normal : 00 Peak)</td>
+                        </tr>
+                        <tr>
+                            <th>Tickets</th>
+                            <th>Charges</th>
+                        </tr>
+                        <tbody id="pricing">
+                        <tr>
+                            <td>1 Foreigner Adult</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <th>Total Payable</th>
+                            <th>$10</th>
+                        </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </fieldset>
+            <br/>
+
+            <div class="btn-block">
+                <button type="button" onclick="submit_data()" style="width: auto">Continue with purchase</button>
+            </div>
+
+        </form>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+
+
+</div>
+
+
+<!--Bottom section -->
+
+
+<div id="footer">
+    <div id="footer_pg">
+
+        <div class="col" id="ft_nav">
+            <h4>Site Map</h4>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="turtle_categories.html">Turtle categories</a></li>
+                <li><a href="hikkaduwa-turtle-hatchery.html">Hikkaduwa turtle hatchery</a></li>
+                <li><a href="threats-to-turtles.html">Threats to turtles</a></li>
+                <!--                <li><a href="">Other turtle hatcheries</a></li>-->
+                <li><a href="kosgoda-turtle-hatchery.html">Kosgoda turtle hatcheries</a></li>
+                <li><a href="bentota-turtle-hatchery.html">Bentota turtle hatcheries</a></li>
+                <li><a href="donation.html">Purchase and Donate</a></li>
+            </ul>
+
+
+        </div>
+
+        <div class="col">
+            <h4>Contact Details</h4>
+            No. 902, Galle Road,<br/>Hikkaduwa,<br/>Sri Lanka<br/><br/>
+
+            <b>Tel:</b> (+94) 77 345 6789 / (+94) 71 234 5678
+            <br/><br/>
+            <h4>Social Media Links</h4>
+            <a class="buts_social" href="" target="_blank"><img src="img/sm_fb.jpg" alt="facebook fan page icon"></a>
+            <a class="buts_social"><img src="img/sm_gp.jpg" alt=""></a>
+            <!--            <a class="buts_social" href="" target="_blank"><img src="img/sm_yt.jpg" alt=""></a>-->
+            <a class="buts_social" href="" target="_blank"><img src="img/sm_ln.jpg" alt=""></a>
+            <a class="buts_social" href="" target="_blank"><img src="img/sm_in.jpg" alt="instagram fan page icon"></a>
+
+
+        </div>
+
+        <div class="col">
+            <h4 style="margin-bottom: 0;">Ask a question</h4>
+
+            <form class="ft_form" name="cform" action="pslg.php" method="post">
+                <input id="sec" type="text" name="email"><br/>
+                <input name="cf3" type="text" placeholder="Your Name*" required> <br/>
+                <input name="cf5" type="email" placeholder="Email*" required> <br/>
+                <input name="cf6" type="text" placeholder="Telephone"><br/>
+                <textarea name="cf13" placeholder="Your enquiry*"></textarea><br/>
+
+                <input id="tkn" name="tkn" type="hidden"/>
+                <br/>
+                <p>We use the data entered above to communicate with you and none of the data is shared with 3rd
+                    parties. Please tick the box to indicate your approval for us to collect your data.</p>
+                <input type="checkbox" required> Agree
+                <br/><br/>
+                <input class="but" type="submit" name="post_but" value="Send Message">
+            </form>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
